@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SparkZola Quick Start Guide | SparkZola</title>
+  <meta name="description" content="A practical reference with: ✅ One-time setup steps ✅ Daily workflow ✅ Essential commands ✅ Quick customizations ✅ Troubleshooting tips ✅ Pro tips">
+  <link rel="stylesheet" href="https://yoloinfinity55.github.io/sparkzola/style.css">
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+  <header class="bg-white shadow-sm border-b border-gray-200">
+    <nav class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="https:&#x2F;&#x2F;yoloinfinity55.github.io&#x2F;sparkzola" class="text-2xl font-bold text-gray-900 hover:text-blue-600 transition">
+        SparkZola
+      </a>
+      <div class="space-x-6">
+        <a href="https:&#x2F;&#x2F;yoloinfinity55.github.io&#x2F;sparkzola" class="text-gray-600 hover:text-blue-600 transition">Home</a>
+        <a href="https://yoloinfinity55.github.io/sparkzola/blog/" class="text-gray-600 hover:text-blue-600 transition">Blog</a>
+      </div>
+    </nav>
+  </header>
+  <main class="max-w-4xl mx-auto px-6 py-12">
+    
+<article>
+  <header class="mb-8">
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">SparkZola Quick Start Guide</h1>
+    <div class="text-gray-600 text-sm">
+      <time datetime="2025-10-15">October 15, 2025</time>
+    </div>
+  </header>
+  <div class="prose prose-lg max-w-none">
+    <h1 id="sparkzola-quick-start-guide">SparkZola Quick Start Guide</h1>
+<h2 id="rocket-one-time-setup">🚀 One-Time Setup</h2>
+<h3 id="1-run-the-setup-script">1. Run the Setup Script</h3>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#96b5b4;">cd</span><span> /Users/minijohn/Documents/github-repo/sparkzola
+</span><span style="color:#bf616a;">chmod</span><span> +x setup_sparkzola_final.sh
+</span><span style="color:#bf616a;">./setup_sparkzola_final.sh
+</span></code></pre>
+<h3 id="2-test-locally">2. Test Locally</h3>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">make</span><span> serve
+</span><span style="color:#65737e;"># Visit http://127.0.0.1:1111
+</span></code></pre>
+<h3 id="3-create-github-repository">3. Create GitHub Repository</h3>
+<ol>
+<li>Go to https://github.com/new</li>
+<li>Name: <code>sparkzola</code></li>
+<li>Visibility: <strong>Public</strong></li>
+<li><strong>Don't initialize</strong> with README</li>
+<li>Click "Create repository"</li>
+</ol>
+<h3 id="4-push-to-github">4. Push to GitHub</h3>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">git</span><span> add .
+</span><span style="color:#bf616a;">git</span><span> commit</span><span style="color:#bf616a;"> -m </span><span>&quot;</span><span style="color:#a3be8c;">Initial SparkZola setup</span><span>&quot;
+</span><span style="color:#bf616a;">git</span><span> push</span><span style="color:#bf616a;"> -u</span><span> origin main
+</span></code></pre>
+<h3 id="5-enable-github-pages">5. Enable GitHub Pages</h3>
+<ol>
+<li>Go to repo Settings → Pages</li>
+<li>Source: <strong>GitHub Actions</strong></li>
+<li>Wait 2-3 minutes</li>
+</ol>
+<h3 id="6-visit-your-live-site">6. Visit Your Live Site</h3>
+<p><strong>https://yoloinfinity55.github.io/sparkzola</strong></p>
+<hr />
+<h2 id="memo-daily-workflow">📝 Daily Workflow</h2>
+<h3 id="create-a-new-post">Create a New Post</h3>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">cat </span><span>&gt; content/blog/my-new-post.md &lt;&lt;&#39;</span><span style="color:#b48ead;">EOF</span><span>&#39;
+</span><span style="color:#a3be8c;">+++
+</span><span style="color:#a3be8c;">title = &quot;My Post Title&quot;
+</span><span style="color:#a3be8c;">date = 2025-10-15
+</span><span style="color:#a3be8c;">description = &quot;Brief description&quot;
+</span><span style="color:#a3be8c;">+++
+</span><span style="color:#a3be8c;">
+</span><span style="color:#a3be8c;">Your content here...
+</span><span style="color:#b48ead;">EOF
+</span></code></pre>
+<h3 id="preview-locally">Preview Locally</h3>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">make</span><span> serve
+</span><span style="color:#65737e;"># Visit http://127.0.0.1:1111
+</span><span style="color:#65737e;"># Changes auto-reload!
+</span></code></pre>
+<h3 id="deploy-to-production">Deploy to Production</h3>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">make</span><span> deploy
+</span><span style="color:#65737e;"># Automatically: builds, commits, pushes
+</span><span style="color:#65737e;"># GitHub Actions deploys in 2-3 minutes
+</span></code></pre>
+<hr />
+<h2 id="dart-essential-commands">🎯 Essential Commands</h2>
+<table><thead><tr><th>Command</th><th>What It Does</th></tr></thead><tbody>
+<tr><td><code>make serve</code></td><td>Start local dev server</td></tr>
+<tr><td><code>make build</code></td><td>Build production site</td></tr>
+<tr><td><code>make deploy</code></td><td>Deploy to GitHub Pages</td></tr>
+<tr><td><code>make clean</code></td><td>Remove build files</td></tr>
+<tr><td><code>make status</code></td><td>Check git status</td></tr>
+<tr><td><code>make help</code></td><td>Show all commands</td></tr>
+</tbody></table>
+<hr />
+<h2 id="file-folder-key-files">📁 Key Files</h2>
+<table><thead><tr><th>File</th><th>Purpose</th></tr></thead><tbody>
+<tr><td><code>config.toml</code></td><td>Site configuration (title, URL, etc.)</td></tr>
+<tr><td><code>content/blog/*.md</code></td><td>Your blog posts</td></tr>
+<tr><td><code>templates/base.html</code></td><td>Site layout (header, footer)</td></tr>
+<tr><td><code>tailwind.config.js</code></td><td>CSS customization</td></tr>
+<tr><td><code>Makefile</code></td><td>Build automation</td></tr>
+</tbody></table>
+<hr />
+<h2 id="art-quick-customizations">🎨 Quick Customizations</h2>
+<h3 id="change-site-title">Change Site Title</h3>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#65737e;"># Edit config.toml
+</span><span style="color:#bf616a;">title</span><span> = &quot;</span><span style="color:#a3be8c;">Your New Title</span><span>&quot;
+</span><span style="color:#bf616a;">description</span><span> = &quot;</span><span style="color:#a3be8c;">Your description</span><span>&quot;
+</span></code></pre>
+<h3 id="add-navigation-link">Add Navigation Link</h3>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#65737e;"># Edit templates/base.html
+</span><span>&lt;a </span><span style="color:#bf616a;">href</span><span>=&quot;</span><span style="color:#a3be8c;">/about</span><span>&quot; </span><span style="color:#bf616a;">class</span><span>=&quot;</span><span style="color:#a3be8c;">...</span><span>&quot;&gt;About&lt;/a&gt;
+</span></code></pre>
+<h3 id="customize-colors">Customize Colors</h3>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#65737e;"># Edit tailwind.config.js
+</span><span style="color:#bf616a;">theme: </span><span>{
+</span><span>  extend: {
+</span><span>    colors: {
+</span><span>      primary: &#39;</span><span style="color:#a3be8c;">#your-color</span><span>&#39;,
+</span><span>    }
+</span><span>  }
+</span><span>}
+</span></code></pre>
+<hr />
+<h2 id="bug-troubleshooting">🐛 Troubleshooting</h2>
+<h3 id="site-not-updating-locally">Site not updating locally?</h3>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">make</span><span> clean
+</span><span style="color:#bf616a;">make</span><span> serve
+</span></code></pre>
+<h3 id="css-not-applying">CSS not applying?</h3>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">npm</span><span> run build:css
+</span><span style="color:#bf616a;">make</span><span> serve
+</span></code></pre>
+<h3 id="github-actions-failing">GitHub Actions failing?</h3>
+<ol>
+<li>Check: https://github.com/yoloinfinity55/sparkzola/actions</li>
+<li>Verify <code>package.json</code> has scripts defined</li>
+<li>Ensure <code>tailwindcss@3.4.1</code> is installed</li>
+</ol>
+<h3 id="404-on-github-pages">404 on GitHub Pages?</h3>
+<ol>
+<li>Repo must be <strong>Public</strong></li>
+<li>Settings → Pages → Source: <strong>GitHub Actions</strong></li>
+<li>Wait 2-3 minutes after first push</li>
+<li>Check <code>base_url</code> in <code>config.toml</code></li>
+</ol>
+<hr />
+<h2 id="books-post-front-matter-reference">📚 Post Front Matter Reference</h2>
+<pre data-lang="markdown" style="background-color:#2b303b;color:#c0c5ce;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>+++
+</span><span>title = &quot;Post Title&quot;              # Required
+</span><span>date = 2025-10-15                 # Required (YYYY-MM-DD)
+</span><span>description = &quot;SEO description&quot;   # Optional but recommended
+</span><span>
+</span><span>[taxonomies]
+</span><span>tags = [&quot;tag1&quot;, &quot;tag2&quot;]          # Optional
+</span><span>+++
+</span></code></pre>
+<hr />
+<h2 id="link-important-urls">🔗 Important URLs</h2>
+<ul>
+<li><strong>Local Dev:</strong> http://127.0.0.1:1111</li>
+<li><strong>Live Site:</strong> https://yoloinfinity55.github.io/sparkzola</li>
+<li><strong>Repository:</strong> https://github.com/yoloinfinity55/sparkzola</li>
+<li><strong>Actions:</strong> https://github.com/yoloinfinity55/sparkzola/actions</li>
+</ul>
+<hr />
+<h2 id="bulb-pro-tips">💡 Pro Tips</h2>
+<ol>
+<li><strong>Keep <code>make serve</code> running</strong> while editing - auto-reloads!</li>
+<li><strong>Use <code>make deploy</code></strong> instead of manual git commands</li>
+<li><strong>Check Actions tab</strong> on GitHub if deployment fails</li>
+<li><strong>Write in Markdown</strong> - it's easy and powerful</li>
+<li><strong>Commit often</strong> - Git is your safety net</li>
+</ol>
+<hr />
+<h2 id="book-learning-resources">📖 Learning Resources</h2>
+<ul>
+<li><strong>Zola Docs:</strong> https://www.getzola.org/documentation/</li>
+<li><strong>TailwindCSS:</strong> https://tailwindcss.com/docs</li>
+<li><strong>Markdown Guide:</strong> https://www.markdownguide.org/</li>
+</ul>
+<hr />
+<h2 id="white-check-mark-checklist-for-new-posts">✅ Checklist for New Posts</h2>
+<ul>
+<li><input disabled="" type="checkbox"/>
+Create <code>.md</code> file in <code>content/blog/</code></li>
+<li><input disabled="" type="checkbox"/>
+Add front matter (title, date, description)</li>
+<li><input disabled="" type="checkbox"/>
+Write content in Markdown</li>
+<li><input disabled="" type="checkbox"/>
+Test locally: <code>make serve</code></li>
+<li><input disabled="" type="checkbox"/>
+Deploy: <code>make deploy</code></li>
+<li><input disabled="" type="checkbox"/>
+Verify live site in 2-3 minutes</li>
+</ul>
+<hr />
+<p><strong>Happy blogging! 🚀</strong></p>
+
+  </div>
+</article>
+
+  </main>
+  <footer class="border-t border-gray-200 mt-16 py-8">
+    <div class="max-w-4xl mx-auto px-6 text-center text-sm text-gray-500">
+      <p>© 2025 SparkZola. Built with Zola and TailwindCSS.</p>
+    </div>
+  </footer>
+</body>
+</html>
