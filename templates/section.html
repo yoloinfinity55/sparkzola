@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block title %}{{ section.title }} | {{ config.title }}{% endblock title %}
+
+{% block content %}
+<!-- Blog Header -->
+<div class="mb-12 text-center">
+  <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">{{ section.title }}</h1>
+  {% if section.content %}
+  <div class="prose prose-lg mx-auto text-gray-600">
+    {{ section.content | safe }}
+  </div>
+  {% endif %}
+</div>
+
+<!-- All Posts Grid -->
+{% if section.pages %}
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+  {% for page in section.pages %}
+  <article class="bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col group">
+    <!-- Gradient Header -->
+    <div class="w-full h-48 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 flex items-center justify-center relative overflow-hidden">
+      <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition-opacity"></div>
+      <span class="text-white text-7xl font-bold opacity-20">{{ page.title | truncate(length=1, end="") }}</span>
+    </div>
+    
+    <!-- Card Content -->
+    <div class="p-6 flex-1 flex flex-col">
+      <!-- Date -->
+      <time datetime="{{ page.date }}" class="text-xs font-semibold text-blue-600 uppercase tracking-wide mb-3">
+        {{ page.date | date(format="%B %d, %Y") }}
+      </time>
+      
+      <!-- Title -->
+      <h2 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition">
+        <a href="{{ page.permalink }}" class="hover:underline">{{ page.title }}</a>
+      </h2>
+      
+      <!-- Description -->
+      <p class="text-gray-600 text-sm mb-4 flex-1">
+        {{ page.description | default(value="Click to read more...") }}
+      </p>
+      
+      <!-- Tags -->
+      {% if page.taxonomies.tags %}
+      <div class="flex flex-wrap gap-2 mb-4">
+        {% for tag in page.taxonomies.tags | slice(end=3) %}
+        <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">{{ tag }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+      
+      <!-- Read More -->
+      <a href="{{ page.permalink }}" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-sm">
+        Read full article
+        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+        </svg>
+      </a>
+    </div>
+  </article>
+  {% endfor %}
+</div>
+{% else %}
+<!-- Empty State -->
+<div class="text-center py-16 bg-gray-50 rounded-lg">
+  <svg class="w-20 h-20 mx-auto text-gray-400 mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+  </svg>
+  <h3 class="text-xl font-bold text-gray-900 mb-2">No posts yet</h3>
+  <p class="text-gray-600">Check back soon for new content!</p>
+</div>
+{% endif %}
+{% endblock content %}
