@@ -29,67 +29,51 @@
     </div>
   </header>
   <div class="prose prose-lg max-w-none">
-    <hr />
-<h3 id="page-facing-up-content-blog-project-spec-md">📄 <code>content/blog/project-spec.md</code></h3>
-<pre data-lang="markdown" style="background-color:#2b303b;color:#c0c5ce;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>+++
-</span><span>title = &quot;SparkZola Project Specification - FINAL VERSION&quot;
-</span><span>date = 2025-10-15
-</span><span>description = &quot;Project Overview and technical details for the SparkZola static blog built with Zola and TailwindCSS&quot;
-</span><span>+++
-</span><span>
-</span><span style="color:#8fa1b3;"># SparkZola Project Specification — FINAL VERSION
-</span><span>
-</span><span style="color:#8fa1b3;">## Project Overview
-</span><span>
-</span><span style="font-weight:bold;color:#ebcb8b;">**Project Name:**</span><span> SparkZola  
-</span><span style="font-weight:bold;color:#ebcb8b;">**Purpose:**</span><span> Modern, fast static blog using Zola SSG and TailwindCSS  
-</span><span style="font-weight:bold;color:#ebcb8b;">**Target Platform:**</span><span> GitHub Pages  
-</span><span style="font-weight:bold;color:#ebcb8b;">**Development Machine:**</span><span> Mac mini M1  
-</span><span style="font-weight:bold;color:#ebcb8b;">**Status:**</span><span> ✅ Successfully Deployed
-</span><span>
-</span><span style="background-color:#4f5b66;color:#c0c5ce;">---
-</span><span>
-</span><span style="color:#8fa1b3;">## Live Deployment
-</span><span>
-</span><span style="color:#bf616a;">- </span><span style="font-weight:bold;color:#ebcb8b;">**Live URL:** </span><span style="color:#d08770;">[https://yoloinfinity55.github.io/sparkzola](https://yoloinfinity55.github.io/sparkzola)
-</span><span style="color:#bf616a;">- </span><span style="font-weight:bold;color:#ebcb8b;">**Repository:** </span><span style="color:#d08770;">[https://github.com/yoloinfinity55/sparkzola](https://github.com/yoloinfinity55/sparkzola)
-</span><span style="color:#bf616a;">- </span><span style="font-weight:bold;color:#ebcb8b;">**Deployment:**</span><span style="color:#bf616a;"> Automatic via GitHub Actions on push to </span><span style="color:#a3be8c;">`main`
-</span><span style="color:#bf616a;">
-</span><span style="background-color:#4f5b66;color:#c0c5ce;">---
-</span><span>
-</span><span style="color:#8fa1b3;">## Verified System Configuration
-</span><span>
-</span><span style="color:#8fa1b3;">### Development Environment
-</span><span style="color:#bf616a;">- </span><span style="font-weight:bold;color:#ebcb8b;">**Location:** </span><span style="color:#a3be8c;">`/Users/minijohn/Documents/github-repo/sparkzola`
-</span><span style="color:#bf616a;">- </span><span style="font-weight:bold;color:#ebcb8b;">**Zola:**</span><span style="color:#bf616a;"> 0.21.0  
-</span><span style="color:#bf616a;">- </span><span style="font-weight:bold;color:#ebcb8b;">**Node.js:**</span><span style="color:#bf616a;"> v22.20.0  
-</span><span style="color:#bf616a;">- </span><span style="font-weight:bold;color:#ebcb8b;">**Git:**</span><span style="color:#bf616a;"> 2.51.0  
-</span><span style="color:#bf616a;">- </span><span style="font-weight:bold;color:#ebcb8b;">**Homebrew:**</span><span style="color:#bf616a;"> 4.6.17  
-</span><span style="color:#bf616a;">- </span><span style="font-weight:bold;color:#ebcb8b;">**Architecture:**</span><span style="color:#bf616a;"> Apple Silicon (M1)
-</span><span style="color:#bf616a;">
-</span><span style="color:#8fa1b3;">### Repository Information
-</span><span style="color:#bf616a;">- </span><span style="font-weight:bold;color:#ebcb8b;">**GitHub User:** </span><span style="color:#a3be8c;">`yoloinfinity55`
-</span><span style="color:#bf616a;">- </span><span style="font-weight:bold;color:#ebcb8b;">**Repository Name:** </span><span style="color:#a3be8c;">`sparkzola`
-</span><span style="color:#bf616a;">- </span><span style="font-weight:bold;color:#ebcb8b;">**Branch:** </span><span style="color:#a3be8c;">`main`
-</span><span style="color:#bf616a;">- </span><span style="font-weight:bold;color:#ebcb8b;">**Visibility:**</span><span style="color:#bf616a;"> Public (required for GitHub Pages)
-</span><span style="color:#bf616a;">
-</span><span style="background-color:#4f5b66;color:#c0c5ce;">---
-</span><span>
-</span><span style="color:#8fa1b3;">## Technology Stack
-</span><span>
-</span><span style="color:#bf616a;">1. </span><span style="font-weight:bold;color:#ebcb8b;">**Static Site Generator:**</span><span style="color:#bf616a;"> Zola 0.21.0  
-</span><span style="color:#bf616a;">2. </span><span style="font-weight:bold;color:#ebcb8b;">**CSS Framework:**</span><span style="color:#bf616a;"> TailwindCSS 3.4.1 (v3, not v4)  
-</span><span style="color:#bf616a;">3. </span><span style="font-weight:bold;color:#ebcb8b;">**Runtime:**</span><span style="color:#bf616a;"> Node.js 22.20.0  
-</span><span style="color:#bf616a;">4. </span><span style="font-weight:bold;color:#ebcb8b;">**Deployment:**</span><span style="color:#bf616a;"> GitHub Pages via GitHub Actions  
-</span><span style="color:#bf616a;">5. </span><span style="font-weight:bold;color:#ebcb8b;">**Version Control:**</span><span style="color:#bf616a;"> Git 2.51.0  
-</span><span style="color:#bf616a;">6. </span><span style="font-weight:bold;color:#ebcb8b;">**Build Automation:**</span><span style="color:#bf616a;"> Make  
-</span><span style="color:#bf616a;">
-</span><span style="background-color:#4f5b66;color:#c0c5ce;">---
-</span><span>
-</span><span style="color:#8fa1b3;">## Project Structure (Verified Working)
-</span><span>
-</span><span>```</span><span style="color:#d08770;">text
-</span><span>sparkzola/
+    <h1 id="sparkzola-project-specification-final-version">SparkZola Project Specification — FINAL VERSION</h1>
+<h2 id="project-overview">Project Overview</h2>
+<p><strong>Project Name:</strong> SparkZola<br />
+<strong>Purpose:</strong> Modern, fast static blog using Zola SSG and TailwindCSS<br />
+<strong>Target Platform:</strong> GitHub Pages<br />
+<strong>Development Machine:</strong> Mac mini M1<br />
+<strong>Status:</strong> ✅ Successfully Deployed</p>
+<hr />
+<h2 id="live-deployment">Live Deployment</h2>
+<ul>
+<li><strong>Live URL:</strong> <a href="https://yoloinfinity55.github.io/sparkzola">https://yoloinfinity55.github.io/sparkzola</a></li>
+<li><strong>Repository:</strong> <a href="https://github.com/yoloinfinity55/sparkzola">https://github.com/yoloinfinity55/sparkzola</a></li>
+<li><strong>Deployment:</strong> Automatic via GitHub Actions on push to <code>main</code></li>
+</ul>
+<hr />
+<h2 id="verified-system-configuration">Verified System Configuration</h2>
+<h3 id="development-environment">Development Environment</h3>
+<ul>
+<li><strong>Location:</strong> <code>/Users/minijohn/Documents/github-repo/sparkzola</code></li>
+<li><strong>Zola:</strong> 0.21.0</li>
+<li><strong>Node.js:</strong> v22.20.0</li>
+<li><strong>Git:</strong> 2.51.0</li>
+<li><strong>Homebrew:</strong> 4.6.17</li>
+<li><strong>Architecture:</strong> Apple Silicon (M1)</li>
+</ul>
+<h3 id="repository-information">Repository Information</h3>
+<ul>
+<li><strong>GitHub User:</strong> <code>yoloinfinity55</code></li>
+<li><strong>Repository Name:</strong> <code>sparkzola</code></li>
+<li><strong>Branch:</strong> <code>main</code></li>
+<li><strong>Visibility:</strong> Public (required for GitHub Pages)</li>
+</ul>
+<hr />
+<h2 id="technology-stack">Technology Stack</h2>
+<ol>
+<li><strong>Static Site Generator:</strong> Zola 0.21.0</li>
+<li><strong>CSS Framework:</strong> TailwindCSS 3.4.1 (v3, not v4)</li>
+<li><strong>Runtime:</strong> Node.js 22.20.0</li>
+<li><strong>Deployment:</strong> GitHub Pages via GitHub Actions</li>
+<li><strong>Version Control:</strong> Git 2.51.0</li>
+<li><strong>Build Automation:</strong> Make</li>
+</ol>
+<hr />
+<h2 id="project-structure-verified-working">Project Structure (Verified Working)</h2>
+<pre data-lang="text" style="background-color:#2b303b;color:#c0c5ce;" class="language-text "><code class="language-text" data-lang="text"><span>sparkzola/
 </span><span>├── .github/
 </span><span>│   └── workflows/
 </span><span>│       └── deploy.yml

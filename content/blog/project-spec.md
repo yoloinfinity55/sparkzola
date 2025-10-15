@@ -4,17 +4,6 @@ date = 2025-10-15
 description = "Project Overview and technical details for the SparkZola static blog built with Zola and TailwindCSS"
 +++
 
----
-
-### 📄 `content/blog/project-spec.md`
-
-````markdown
-+++
-title = "SparkZola Project Specification - FINAL VERSION"
-date = 2025-10-15
-description = "Project Overview and technical details for the SparkZola static blog built with Zola and TailwindCSS"
-+++
-
 # SparkZola Project Specification — FINAL VERSION
 
 ## Project Overview
