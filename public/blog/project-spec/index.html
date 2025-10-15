@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SparkZola Project Specification - FINAL VERSION | SparkZola</title>
+  <meta name="description" content="Project Overview and technical details for the SparkZola static blog built with Zola and TailwindCSS">
+  <link rel="stylesheet" href="https://yoloinfinity55.github.io/sparkzola/style.css">
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+  <header class="bg-white shadow-sm border-b border-gray-200">
+    <nav class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="https:&#x2F;&#x2F;yoloinfinity55.github.io&#x2F;sparkzola" class="text-2xl font-bold text-gray-900 hover:text-blue-600 transition">
+        SparkZola
+      </a>
+      <div class="space-x-6">
+        <a href="https:&#x2F;&#x2F;yoloinfinity55.github.io&#x2F;sparkzola" class="text-gray-600 hover:text-blue-600 transition">Home</a>
+        <a href="https://yoloinfinity55.github.io/sparkzola/blog/" class="text-gray-600 hover:text-blue-600 transition">Blog</a>
+      </div>
+    </nav>
+  </header>
+  <main class="max-w-4xl mx-auto px-6 py-12">
+    
+<article>
+  <header class="mb-8">
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">SparkZola Project Specification - FINAL VERSION</h1>
+    <div class="text-gray-600 text-sm">
+      <time datetime="2025-10-15">October 15, 2025</time>
+    </div>
+  </header>
+  <div class="prose prose-lg max-w-none">
+    <hr />
+<h3 id="page-facing-up-content-blog-project-spec-md">📄 <code>content/blog/project-spec.md</code></h3>
+<pre data-lang="markdown" style="background-color:#2b303b;color:#c0c5ce;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>+++
+</span><span>title = &quot;SparkZola Project Specification - FINAL VERSION&quot;
+</span><span>date = 2025-10-15
+</span><span>description = &quot;Project Overview and technical details for the SparkZola static blog built with Zola and TailwindCSS&quot;
+</span><span>+++
+</span><span>
+</span><span style="color:#8fa1b3;"># SparkZola Project Specification — FINAL VERSION
+</span><span>
+</span><span style="color:#8fa1b3;">## Project Overview
+</span><span>
+</span><span style="font-weight:bold;color:#ebcb8b;">**Project Name:**</span><span> SparkZola  
+</span><span style="font-weight:bold;color:#ebcb8b;">**Purpose:**</span><span> Modern, fast static blog using Zola SSG and TailwindCSS  
+</span><span style="font-weight:bold;color:#ebcb8b;">**Target Platform:**</span><span> GitHub Pages  
+</span><span style="font-weight:bold;color:#ebcb8b;">**Development Machine:**</span><span> Mac mini M1  
+</span><span style="font-weight:bold;color:#ebcb8b;">**Status:**</span><span> ✅ Successfully Deployed
+</span><span>
+</span><span style="background-color:#4f5b66;color:#c0c5ce;">---
+</span><span>
+</span><span style="color:#8fa1b3;">## Live Deployment
+</span><span>
+</span><span style="color:#bf616a;">- </span><span style="font-weight:bold;color:#ebcb8b;">**Live URL:** </span><span style="color:#d08770;">[https://yoloinfinity55.github.io/sparkzola](https://yoloinfinity55.github.io/sparkzola)
+</span><span style="color:#bf616a;">- </span><span style="font-weight:bold;color:#ebcb8b;">**Repository:** </span><span style="color:#d08770;">[https://github.com/yoloinfinity55/sparkzola](https://github.com/yoloinfinity55/sparkzola)
+</span><span style="color:#bf616a;">- </span><span style="font-weight:bold;color:#ebcb8b;">**Deployment:**</span><span style="color:#bf616a;"> Automatic via GitHub Actions on push to </span><span style="color:#a3be8c;">`main`
+</span><span style="color:#bf616a;">
+</span><span style="background-color:#4f5b66;color:#c0c5ce;">---
+</span><span>
+</span><span style="color:#8fa1b3;">## Verified System Configuration
+</span><span>
+</span><span style="color:#8fa1b3;">### Development Environment
+</span><span style="color:#bf616a;">- </span><span style="font-weight:bold;color:#ebcb8b;">**Location:** </span><span style="color:#a3be8c;">`/Users/minijohn/Documents/github-repo/sparkzola`
+</span><span style="color:#bf616a;">- </span><span style="font-weight:bold;color:#ebcb8b;">**Zola:**</span><span style="color:#bf616a;"> 0.21.0  
+</span><span style="color:#bf616a;">- </span><span style="font-weight:bold;color:#ebcb8b;">**Node.js:**</span><span style="color:#bf616a;"> v22.20.0  
+</span><span style="color:#bf616a;">- </span><span style="font-weight:bold;color:#ebcb8b;">**Git:**</span><span style="color:#bf616a;"> 2.51.0  
+</span><span style="color:#bf616a;">- </span><span style="font-weight:bold;color:#ebcb8b;">**Homebrew:**</span><span style="color:#bf616a;"> 4.6.17  
+</span><span style="color:#bf616a;">- </span><span style="font-weight:bold;color:#ebcb8b;">**Architecture:**</span><span style="color:#bf616a;"> Apple Silicon (M1)
+</span><span style="color:#bf616a;">
+</span><span style="color:#8fa1b3;">### Repository Information
+</span><span style="color:#bf616a;">- </span><span style="font-weight:bold;color:#ebcb8b;">**GitHub User:** </span><span style="color:#a3be8c;">`yoloinfinity55`
+</span><span style="color:#bf616a;">- </span><span style="font-weight:bold;color:#ebcb8b;">**Repository Name:** </span><span style="color:#a3be8c;">`sparkzola`
+</span><span style="color:#bf616a;">- </span><span style="font-weight:bold;color:#ebcb8b;">**Branch:** </span><span style="color:#a3be8c;">`main`
+</span><span style="color:#bf616a;">- </span><span style="font-weight:bold;color:#ebcb8b;">**Visibility:**</span><span style="color:#bf616a;"> Public (required for GitHub Pages)
+</span><span style="color:#bf616a;">
+</span><span style="background-color:#4f5b66;color:#c0c5ce;">---
+</span><span>
+</span><span style="color:#8fa1b3;">## Technology Stack
+</span><span>
+</span><span style="color:#bf616a;">1. </span><span style="font-weight:bold;color:#ebcb8b;">**Static Site Generator:**</span><span style="color:#bf616a;"> Zola 0.21.0  
+</span><span style="color:#bf616a;">2. </span><span style="font-weight:bold;color:#ebcb8b;">**CSS Framework:**</span><span style="color:#bf616a;"> TailwindCSS 3.4.1 (v3, not v4)  
+</span><span style="color:#bf616a;">3. </span><span style="font-weight:bold;color:#ebcb8b;">**Runtime:**</span><span style="color:#bf616a;"> Node.js 22.20.0  
+</span><span style="color:#bf616a;">4. </span><span style="font-weight:bold;color:#ebcb8b;">**Deployment:**</span><span style="color:#bf616a;"> GitHub Pages via GitHub Actions  
+</span><span style="color:#bf616a;">5. </span><span style="font-weight:bold;color:#ebcb8b;">**Version Control:**</span><span style="color:#bf616a;"> Git 2.51.0  
+</span><span style="color:#bf616a;">6. </span><span style="font-weight:bold;color:#ebcb8b;">**Build Automation:**</span><span style="color:#bf616a;"> Make  
+</span><span style="color:#bf616a;">
+</span><span style="background-color:#4f5b66;color:#c0c5ce;">---
+</span><span>
+</span><span style="color:#8fa1b3;">## Project Structure (Verified Working)
+</span><span>
+</span><span>```</span><span style="color:#d08770;">text
+</span><span>sparkzola/
+</span><span>├── .github/
+</span><span>│   └── workflows/
+</span><span>│       └── deploy.yml
+</span><span>├── content/
+</span><span>│   ├── _index.md
+</span><span>│   └── blog/
+</span><span>│       ├── _index.md
+</span><span>│       ├── hello-sparkzola.md
+</span><span>│       └── project-spec.md
+</span><span>├── templates/
+</span><span>│   ├── base.html
+</span><span>│   ├── index.html
+</span><span>│   └── page.html
+</span><span>├── static/
+</span><span>│   └── style.css
+</span><span>├── config.toml
+</span><span>├── input.css
+</span><span>├── tailwind.config.js
+</span><span>├── package.json
+</span><span>├── Makefile
+</span><span>└── README.md
+</span></code></pre>
+<hr />
+<h2 id="configuration-files-verified-working">Configuration Files (Verified Working)</h2>
+<h3 id="config-toml"><code>config.toml</code></h3>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#bf616a;">base_url </span><span>= &quot;</span><span style="color:#a3be8c;">https://yoloinfinity55.github.io/sparkzola</span><span>&quot;
+</span><span style="color:#bf616a;">title </span><span>= &quot;</span><span style="color:#a3be8c;">SparkZola</span><span>&quot;
+</span><span style="color:#bf616a;">description </span><span>= &quot;</span><span style="color:#a3be8c;">A modern Zola + TailwindCSS blog</span><span>&quot;
+</span><span style="color:#bf616a;">compile_sass </span><span>= </span><span style="color:#d08770;">false
+</span><span style="color:#bf616a;">build_search_index </span><span>= </span><span style="color:#d08770;">true
+</span><span style="color:#bf616a;">output_dir </span><span>= &quot;</span><span style="color:#a3be8c;">public</span><span>&quot;
+</span><span style="color:#bf616a;">default_language </span><span>= &quot;</span><span style="color:#a3be8c;">en</span><span>&quot;
+</span><span>
+</span><span>[markdown]
+</span><span style="color:#bf616a;">highlight_code </span><span>= </span><span style="color:#d08770;">true
+</span><span style="color:#bf616a;">highlight_theme </span><span>= &quot;</span><span style="color:#a3be8c;">base16-ocean-dark</span><span>&quot;
+</span></code></pre>
+<h3 id="tailwind-config-js"><code>tailwind.config.js</code></h3>
+<pre data-lang="javascript" style="background-color:#2b303b;color:#c0c5ce;" class="language-javascript "><code class="language-javascript" data-lang="javascript"><span style="color:#65737e;">/** </span><span style="color:#b48ead;">@type </span><span style="color:#65737e;">{import(&#39;tailwindcss&#39;).Config} */
+</span><span>module.exports = {
+</span><span>  content: [
+</span><span>    &quot;</span><span style="color:#a3be8c;">./templates/**/*.html</span><span>&quot;,
+</span><span>    &quot;</span><span style="color:#a3be8c;">./content/**/*.md</span><span>&quot;
+</span><span>  ],
+</span><span>  theme: {
+</span><span>    extend: {},
+</span><span>  },
+</span><span>  plugins: [],
+</span><span>}
+</span></code></pre>
+<h3 id="input-css"><code>input.css</code></h3>
+<pre data-lang="css" style="background-color:#2b303b;color:#c0c5ce;" class="language-css "><code class="language-css" data-lang="css"><span>@</span><span style="color:#b48ead;">tailwind </span><span style="color:#bf616a;">base</span><span style="color:#b48ead;">;
+</span><span>@</span><span style="color:#b48ead;">tailwind components;
+</span><span>@</span><span style="color:#b48ead;">tailwind utilities;
+</span></code></pre>
+<h3 id="package-json"><code>package.json</code></h3>
+<pre data-lang="json" style="background-color:#2b303b;color:#c0c5ce;" class="language-json "><code class="language-json" data-lang="json"><span>{
+</span><span>  &quot;</span><span style="color:#a3be8c;">name</span><span>&quot;: &quot;</span><span style="color:#a3be8c;">sparkzola</span><span>&quot;,
+</span><span>  &quot;</span><span style="color:#a3be8c;">version</span><span>&quot;: &quot;</span><span style="color:#a3be8c;">1.0.0</span><span>&quot;,
+</span><span>  &quot;</span><span style="color:#a3be8c;">scripts</span><span>&quot;: {
+</span><span>    &quot;</span><span style="color:#a3be8c;">build:css</span><span>&quot;: &quot;</span><span style="color:#a3be8c;">npx tailwindcss -i ./input.css -o ./static/style.css --minify</span><span>&quot;,
+</span><span>    &quot;</span><span style="color:#a3be8c;">watch:css</span><span>&quot;: &quot;</span><span style="color:#a3be8c;">npx tailwindcss -i ./input.css -o ./static/style.css --watch</span><span>&quot;,
+</span><span>    &quot;</span><span style="color:#a3be8c;">build</span><span>&quot;: &quot;</span><span style="color:#a3be8c;">npm run build:css &amp;&amp; zola build</span><span>&quot;,
+</span><span>    &quot;</span><span style="color:#a3be8c;">serve</span><span>&quot;: &quot;</span><span style="color:#a3be8c;">npm run build:css &amp;&amp; zola serve</span><span>&quot;
+</span><span>  },
+</span><span>  &quot;</span><span style="color:#a3be8c;">devDependencies</span><span>&quot;: {
+</span><span>    &quot;</span><span style="color:#a3be8c;">autoprefixer</span><span>&quot;: &quot;</span><span style="color:#a3be8c;">^10.4.x</span><span>&quot;,
+</span><span>    &quot;</span><span style="color:#a3be8c;">postcss</span><span>&quot;: &quot;</span><span style="color:#a3be8c;">^8.4.x</span><span>&quot;,
+</span><span>    &quot;</span><span style="color:#a3be8c;">tailwindcss</span><span>&quot;: &quot;</span><span style="color:#a3be8c;">3.4.1</span><span>&quot;
+</span><span>  }
+</span><span>}
+</span></code></pre>
+<hr />
+<h2 id="github-actions-workflow-working-configuration">GitHub Actions Workflow (Working Configuration)</h2>
+<p><strong>File:</strong> <code>.github/workflows/deploy.yml</code></p>
+<pre data-lang="yaml" style="background-color:#2b303b;color:#c0c5ce;" class="language-yaml "><code class="language-yaml" data-lang="yaml"><span style="color:#bf616a;">name</span><span>: </span><span style="color:#a3be8c;">Deploy SparkZola to GitHub Pages
+</span><span>
+</span><span style="color:#d08770;">on</span><span>:
+</span><span>  </span><span style="color:#bf616a;">push</span><span>:
+</span><span>    </span><span style="color:#bf616a;">branches</span><span>: [</span><span style="color:#a3be8c;">main</span><span>]
+</span><span>  </span><span style="color:#bf616a;">workflow_dispatch</span><span>:
+</span><span>
+</span><span style="color:#bf616a;">permissions</span><span>:
+</span><span>  </span><span style="color:#bf616a;">contents</span><span>: </span><span style="color:#a3be8c;">read
+</span><span>  </span><span style="color:#bf616a;">pages</span><span>: </span><span style="color:#a3be8c;">write
+</span><span>  </span><span style="color:#bf616a;">id-token</span><span>: </span><span style="color:#a3be8c;">write
+</span><span>
+</span><span style="color:#bf616a;">concurrency</span><span>:
+</span><span>  </span><span style="color:#bf616a;">group</span><span>: &quot;</span><span style="color:#a3be8c;">pages</span><span>&quot;
+</span><span>  </span><span style="color:#bf616a;">cancel-in-progress</span><span>: </span><span style="color:#d08770;">false
+</span><span>
+</span><span style="color:#bf616a;">jobs</span><span>:
+</span><span>  </span><span style="color:#bf616a;">build</span><span>:
+</span><span>    </span><span style="color:#bf616a;">runs-on</span><span>: </span><span style="color:#a3be8c;">ubuntu-latest
+</span><span>    </span><span style="color:#bf616a;">steps</span><span>:
+</span><span>      - </span><span style="color:#bf616a;">name</span><span>: </span><span style="color:#a3be8c;">Checkout repository
+</span><span>        </span><span style="color:#bf616a;">uses</span><span>: </span><span style="color:#a3be8c;">actions/checkout@v4
+</span><span>
+</span><span>      - </span><span style="color:#bf616a;">name</span><span>: </span><span style="color:#a3be8c;">Setup Node.js
+</span><span>        </span><span style="color:#bf616a;">uses</span><span>: </span><span style="color:#a3be8c;">actions/setup-node@v4
+</span><span>        </span><span style="color:#bf616a;">with</span><span>:
+</span><span>          </span><span style="color:#bf616a;">node-version</span><span>: &#39;</span><span style="color:#a3be8c;">22</span><span>&#39;
+</span><span>
+</span><span>      - </span><span style="color:#bf616a;">name</span><span>: </span><span style="color:#a3be8c;">Install dependencies
+</span><span>        </span><span style="color:#bf616a;">run</span><span>: </span><span style="color:#b48ead;">|
+</span><span style="color:#a3be8c;">          npm install
+</span><span style="color:#a3be8c;">          npm list tailwindcss || npm install -D tailwindcss@3.4.1
+</span><span style="color:#a3be8c;">
+</span><span>      - </span><span style="color:#bf616a;">name</span><span>: </span><span style="color:#a3be8c;">Build TailwindCSS
+</span><span>        </span><span style="color:#bf616a;">run</span><span>: </span><span style="color:#a3be8c;">npx tailwindcss -i ./input.css -o ./static/style.css --minify
+</span><span>
+</span><span>      - </span><span style="color:#bf616a;">name</span><span>: </span><span style="color:#a3be8c;">Setup Zola
+</span><span>        </span><span style="color:#bf616a;">uses</span><span>: </span><span style="color:#a3be8c;">taiki-e/install-action@v2
+</span><span>        </span><span style="color:#bf616a;">with</span><span>:
+</span><span>          </span><span style="color:#bf616a;">tool</span><span>: </span><span style="color:#a3be8c;">zola@0.21.0
+</span><span>
+</span><span>      - </span><span style="color:#bf616a;">name</span><span>: </span><span style="color:#a3be8c;">Build Zola site
+</span><span>        </span><span style="color:#bf616a;">run</span><span>: </span><span style="color:#a3be8c;">zola build
+</span><span>
+</span><span>      - </span><span style="color:#bf616a;">name</span><span>: </span><span style="color:#a3be8c;">Upload artifact
+</span><span>        </span><span style="color:#bf616a;">uses</span><span>: </span><span style="color:#a3be8c;">actions/upload-pages-artifact@v3
+</span><span>        </span><span style="color:#bf616a;">with</span><span>:
+</span><span>          </span><span style="color:#bf616a;">path</span><span>: </span><span style="color:#a3be8c;">./public
+</span><span>
+</span><span>  </span><span style="color:#bf616a;">deploy</span><span>:
+</span><span>    </span><span style="color:#bf616a;">environment</span><span>:
+</span><span>      </span><span style="color:#bf616a;">name</span><span>: </span><span style="color:#a3be8c;">github-pages
+</span><span>      </span><span style="color:#bf616a;">url</span><span>: </span><span style="color:#a3be8c;">${{ steps.deployment.outputs.page_url }}
+</span><span>    </span><span style="color:#bf616a;">runs-on</span><span>: </span><span style="color:#a3be8c;">ubuntu-latest
+</span><span>    </span><span style="color:#bf616a;">needs</span><span>: </span><span style="color:#a3be8c;">build
+</span><span>    </span><span style="color:#bf616a;">steps</span><span>:
+</span><span>      - </span><span style="color:#bf616a;">name</span><span>: </span><span style="color:#a3be8c;">Deploy to GitHub Pages
+</span><span>        </span><span style="color:#bf616a;">id</span><span>: </span><span style="color:#a3be8c;">deployment
+</span><span>        </span><span style="color:#bf616a;">uses</span><span>: </span><span style="color:#a3be8c;">actions/deploy-pages@v4
+</span></code></pre>
+<hr />
+<h2 id="makefile-complete-working-version">Makefile (Complete Working Version)</h2>
+<pre data-lang="makefile" style="background-color:#2b303b;color:#c0c5ce;" class="language-makefile "><code class="language-makefile" data-lang="makefile"><span style="color:#65737e;"># ==========================================
+</span><span style="color:#65737e;"># SparkZola Makefile
+</span><span style="color:#65737e;"># ==========================================
+</span><span>
+</span><span style="color:#bf616a;">PROJECT_NAME </span><span>= </span><span style="color:#a3be8c;">sparkzola
+</span><span style="color:#bf616a;">GITHUB_USER  </span><span>= </span><span style="color:#a3be8c;">yoloinfinity55
+</span><span style="color:#bf616a;">BUILD_DIR    </span><span>= </span><span style="color:#a3be8c;">public
+</span><span>
+</span><span style="color:#8fa1b3;">.PHONY</span><span>: </span><span style="color:#a3be8c;">setup css build serve deploy clean status
+</span><span>
+</span><span style="color:#8fa1b3;">setup</span><span>:
+</span><span>	</span><span style="color:#d08770;">@</span><span style="color:#96b5b4;">echo </span><span>&quot;</span><span style="color:#a3be8c;">🧩 Installing dependencies...</span><span>&quot;
+</span><span>	</span><span style="color:#d08770;">@</span><span style="color:#bf616a;">npm</span><span> install
+</span><span>	</span><span style="color:#d08770;">@</span><span style="color:#96b5b4;">echo </span><span>&quot;</span><span style="color:#a3be8c;">✓ Setup complete</span><span>&quot;
+</span><span>
+</span><span style="color:#8fa1b3;">css</span><span>:
+</span><span>	</span><span style="color:#d08770;">@</span><span style="color:#96b5b4;">echo </span><span>&quot;</span><span style="color:#a3be8c;">🎨 Building TailwindCSS...</span><span>&quot;
+</span><span>	</span><span style="color:#d08770;">@</span><span style="color:#bf616a;">npm</span><span> run build:css
+</span><span>	</span><span style="color:#d08770;">@</span><span style="color:#96b5b4;">echo </span><span>&quot;</span><span style="color:#a3be8c;">✓ CSS built</span><span>&quot;
+</span><span>
+</span><span style="color:#8fa1b3;">build</span><span>: </span><span style="color:#a3be8c;">css
+</span><span>	</span><span style="color:#d08770;">@</span><span style="color:#96b5b4;">echo </span><span>&quot;</span><span style="color:#a3be8c;">🏗️  Building Zola site...</span><span>&quot;
+</span><span>	</span><span style="color:#d08770;">@</span><span style="color:#bf616a;">zola</span><span> build
+</span><span>	</span><span style="color:#d08770;">@</span><span style="color:#96b5b4;">echo </span><span>&quot;</span><span style="color:#a3be8c;">✓ Site built in ./public</span><span>&quot;
+</span><span>
+</span><span style="color:#8fa1b3;">serve</span><span>: </span><span style="color:#a3be8c;">css
+</span><span>	</span><span style="color:#d08770;">@</span><span style="color:#96b5b4;">echo </span><span>&quot;</span><span style="color:#a3be8c;">🚀 Starting dev server at http://127.0.0.1:1111</span><span>&quot;
+</span><span>	</span><span style="color:#d08770;">@</span><span style="color:#bf616a;">zola</span><span> serve
+</span><span>
+</span><span style="color:#8fa1b3;">deploy</span><span>: </span><span style="color:#a3be8c;">build
+</span><span>	</span><span style="color:#d08770;">@</span><span style="color:#96b5b4;">echo </span><span>&quot;</span><span style="color:#a3be8c;">📦 Deploying to GitHub...</span><span>&quot;
+</span><span>	</span><span style="color:#d08770;">@</span><span style="color:#bf616a;">git</span><span> add .
+</span><span>	</span><span style="color:#d08770;">@</span><span style="color:#bf616a;">git</span><span> commit</span><span style="color:#bf616a;"> -m </span><span>&quot;</span><span style="color:#a3be8c;">Update site: </span><span style="color:#b48ead;">$$(</span><span style="color:#bf616a;">date +&#39;%Y-%m-%d %H:%M:%S&#39;</span><span style="color:#b48ead;">)</span><span>&quot; || </span><span style="color:#96b5b4;">echo </span><span>&quot;</span><span style="color:#a3be8c;">No changes to commit</span><span>&quot;
+</span><span>	</span><span style="color:#d08770;">@</span><span style="color:#bf616a;">git</span><span> push origin main
+</span><span>	</span><span style="color:#d08770;">@</span><span style="color:#96b5b4;">echo </span><span>&quot;</span><span style="color:#a3be8c;">✓ Pushed to GitHub. Actions will deploy to Pages.</span><span>&quot;
+</span></code></pre>
+<hr />
+<h2 id="development-workflow">Development Workflow</h2>
+<h3 id="local-development">Local Development</h3>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">make</span><span> serve
+</span></code></pre>
+<p>Visit <a href="http://127.0.0.1:1111">http://127.0.0.1:1111</a></p>
+<h3 id="create-new-posts">Create New Posts</h3>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">cat </span><span>&gt; content/blog/new-post.md &lt;&lt;&#39;</span><span style="color:#b48ead;">EOF</span><span>&#39;
+</span><span style="color:#a3be8c;">+++
+</span><span style="color:#a3be8c;">title = &quot;New Post Title&quot;
+</span><span style="color:#a3be8c;">date = 2025-10-15
+</span><span style="color:#a3be8c;">description = &quot;Post description&quot;
+</span><span style="color:#a3be8c;">+++
+</span><span style="color:#a3be8c;">
+</span><span style="color:#a3be8c;">Your content here...
+</span><span style="color:#b48ead;">EOF
+</span></code></pre>
+<h3 id="deploy-to-production">Deploy to Production</h3>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">make</span><span> deploy
+</span></code></pre>
+<hr />
+<h2 id="project-status">Project Status</h2>
+<p>✅ <strong>Production Ready</strong></p>
+<ul>
+<li>Created: <strong>October 14, 2025</strong></li>
+<li>Deployed: <strong>October 15, 2025</strong></li>
+<li>Live: <a href="https://yoloinfinity55.github.io/sparkzola">https://yoloinfinity55.github.io/sparkzola</a></li>
+<li>Last Updated: <strong>October 15, 2025</strong></li>
+</ul>
+<hr />
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://www.getzola.org/documentation/">Zola Documentation</a></li>
+<li><a href="https://tailwindcss.com/docs">TailwindCSS Docs</a></li>
+<li><a href="https://docs.github.com/en/pages">GitHub Pages Docs</a></li>
+<li><a href="https://www.markdownguide.org/">Markdown Guide</a></li>
+</ul>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>
+</span><span>---
+</span><span>
+</span><span>### ✅ You can now:
+</span><span>1. Save that file as:
+</span></code></pre>
+<p>content/blog/project-spec.md</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>2. Run:
+</span><span>```bash
+</span><span>make serve
+</span></code></pre>
+<ol start="3">
+<li>Open → <a href="http://127.0.0.1:1111/blog/project-spec/">http://127.0.0.1:1111/blog/project-spec/</a></li>
+</ol>
+<p>It will render cleanly with:</p>
+<ul>
+<li>headings styled by Tailwind’s <code>prose</code></li>
+<li>syntax-highlighted code blocks</li>
+<li>no shortcode or CSP errors</li>
+<li>ready to deploy to GitHub Pages</li>
+</ul>
+<hr />
+
+  </div>
+</article>
+
+  </main>
+  <footer class="border-t border-gray-200 mt-16 py-8">
+    <div class="max-w-4xl mx-auto px-6 text-center text-sm text-gray-500">
+      <p>© 2025 SparkZola. Built with Zola and TailwindCSS.</p>
+    </div>
+  </footer>
+</body>
+</html>
