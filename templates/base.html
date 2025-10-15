@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+  <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}">
+  <link rel="stylesheet" href="{{ get_url(path="style.css") }}">
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+  <header class="bg-white shadow-sm border-b border-gray-200">
+    <nav class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="{{ config.base_url }}" class="text-2xl font-bold text-gray-900 hover:text-blue-600 transition">
+        {{ config.title }}
+      </a>
+      <div class="space-x-6">
+        <a href="{{ config.base_url }}" class="text-gray-600 hover:text-blue-600 transition">Home</a>
+        <a href="{{ get_url(path="@/blog/_index.md") }}" class="text-gray-600 hover:text-blue-600 transition">Blog</a>
+      </div>
+    </nav>
+  </header>
+  <main class="max-w-4xl mx-auto px-6 py-12">
+    {% block content %}{% endblock content %}
+  </main>
+  <footer class="border-t border-gray-200 mt-16 py-8">
+    <div class="max-w-4xl mx-auto px-6 text-center text-sm text-gray-500">
+      <p>© {{ now() | date(format="%Y") }} {{ config.title }}. Built with Zola and TailwindCSS.</p>
+    </div>
+  </footer>
+</body>
+</html>

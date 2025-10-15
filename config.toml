@@ -1,0 +1,11 @@
+base_url = "https://yoloinfinity55.github.io/sparkzola"
+title = "SparkZola"
+description = "A modern Zola + TailwindCSS blog"
+compile_sass = false
+build_search_index = true
+output_dir = "public"
+default_language = "en"
+
+[markdown]
+highlight_code = true
+highlight_theme = "base16-ocean-dark"
